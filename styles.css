@@ -1,0 +1,195 @@
+/* Futuristic Base Styles */
+:root {
+    --primary: #6a11cb;
+    --secondary: #2575fc;
+    --neon: #00f2fe;
+    --text: #ffffff;
+    --dark: #0f0f1a;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--dark), #1a1a2e);
+    color: var(--text);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* 3D Particle Background */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+/* Floating Moon */
+.moon {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at 30% 30%, #fff, #f5f5f5 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+    z-index: 0;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Futuristic Header */
+header {
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+}
+
+.eid-title {
+    font-size: 4rem;
+    background: linear-gradient(to right, var(--neon), #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px var(--neon); }
+    to { text-shadow: 0 0 20px var(--neon), 0 0 30px #4facfe; }
+}
+
+/* Neon Countdown */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.countdown-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    min-width: 120px;
+    transition: all 0.3s;
+}
+
+.countdown-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
+}
+
+.countdown-box span {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #fff, var(--neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Neon Button */
+.neon-btn {
+    background: transparent;
+    color: var(--neon);
+    border: 2px solid var(--neon);
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.neon-btn:hover {
+    background: var(--neon);
+    color: var(--dark);
+    box-shadow: 0 0 20px var(--neon);
+}
+
+/* 3D Tilt Cards */
+.qurbani-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--neon);
+    margin-bottom: 20px;
+}
+
+/* AI Quotes Section */
+.ai-quotes {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.quote-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#ai-quote {
+    font-size: 1.8rem;
+    font-style: italic;
+}
+
+#generate-quote {
+    background: var(--neon);
+    color: var(--dark);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#generate-quote:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--neon);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .eid-title {
+        font-size: 2.5rem;
+    }
+    .countdown-box {
+        padding: 15px;
+        min-width: 80px;
+    }
+    .countdown-box span {
+        font-size: 2rem;
+    }
+}
